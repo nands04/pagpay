@@ -908,10 +908,28 @@ footer{background:#080808;border-top:1px solid rgba(255,255,255,.03);padding:72p
   .hero-img-main{position:absolute;inset:0;width:100%;height:100%;object-position:center 30%}
   .particle{display:none}
   .prod-grid,.benef-grid{grid-template-columns:1fr}
-  .cta-btns,.cta-guarantees{flex-direction:column;align-items:center}
-  .ft-top{grid-template-columns:1fr}
-  .ft-bot{flex-direction:column;text-align:center}
-  section{padding:68px 0}
+  /* Benefícios (Z-pattern) */
+  .benef-row{grid-template-columns:1fr;border-bottom:1px solid rgba(255,255,255,.04);padding:40px 0}
+  .benef-row:nth-child(even) .benef-ico-col, .benef-row:nth-child(odd) .benef-ico-col{order:-1}
+  .benef-row:nth-child(even) .benef-txt-col{border:none}
+  .benef-txt-col{padding:24px 20px 0;text-align:center}
+  .benef-ico-col{padding:0 20px}
+  /* Depoimentos */
+  .depo-card{width:300px;padding:24px}
+  .depo-card::before{font-size:120px;right:16px;top:-10px}
+  /* FAQ */
+  .faq-q{font-size:14px;padding:16px 0}
+  .faq-cta-box{padding:24px}
+  /* CTA */
+  .cta-h{font-size:32px}
+  .cta-btns,.cta-guarantees{flex-direction:column;align-items:center;gap:12px}
+  /* Footer */
+  .ft-top{grid-template-columns:1fr;text-align:center;gap:32px}
+  .ft-brand{display:flex;flex-direction:column;align-items:center}
+  .ft-contacts{align-items:center}
+  .ft-seals{justify-content:center}
+  .ft-bot{flex-direction:column;text-align:center;gap:12px}
+  section{padding:64px 0}
 }
 </style>
 </head>
