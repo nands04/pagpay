@@ -889,8 +889,10 @@ footer{background:#080808;border-top:1px solid rgba(255,255,255,.03);padding:72p
 }
 @media(max-width:768px){
   nav{display:none}
-  .h-cta .btn-outline{display:none}
+  .h-cta .btn-outline, .h-cta .btn-primary{display:none}
   .hamburger{display:flex}
+  .h-in{position:relative;justify-content:flex-end}
+  .logo{position:absolute;left:50%;transform:translateX(-50%)}
   /* hero mobile: coluna imagem em cima, texto embaixo */
   .hero-split{flex-direction:column}
   .hero-text{width:100%;padding:40px 24px 48px;text-align:center}
