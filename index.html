@@ -1036,6 +1036,10 @@ footer{background:#080808;border-top:1px solid rgba(255,255,255,.03);padding:72p
         <span class="hero-hl-lbl">Crédito à vista</span>
       </div>
       <div class="hero-hl">
+        <span class="hero-hl-val">0,40%</span>
+        <span class="hero-hl-lbl">Taxa no Pix</span>
+      </div>
+      <div class="hero-hl">
         <span class="hero-hl-val">D+0 & D+1</span>
         <span class="hero-hl-lbl">Recebimento</span>
       </div>
@@ -1194,11 +1198,11 @@ footer{background:#080808;border-top:1px solid rgba(255,255,255,.03);padding:72p
     <h2 class="sec-t" id="calc-title" style="margin-top:10px">Calcule o que<br><span class="g">você recebe.</span></h2>
     <p class="sec-sub" style="margin-top:13px">Sem letras miúdas. Coloque o valor da venda e veja exatamente quanto cai na sua conta. Simples assim.</p>
     <div style="margin-top:32px">
-      <div class="calc-taxa"><span class="taxa-lbl">Débito</span><span class="taxa-val">1,49%</span></div>
-      <div class="calc-taxa"><span class="taxa-lbl">Crédito à vista</span><span class="taxa-val">2,49%</span></div>
-      <div class="calc-taxa"><span class="taxa-lbl">Crédito 2x–6x</span><span class="taxa-val">2,99%</span></div>
-      <div class="calc-taxa"><span class="taxa-lbl">Crédito 7x–12x</span><span class="taxa-val">3,49%</span></div>
-      <div class="calc-taxa"><span class="taxa-lbl">Pix</span><span class="taxa-val">0,99%</span></div>
+      <div class="calc-taxa"><span class="taxa-lbl">Débito</span><span class="taxa-val">0,99%</span></div>
+      <div class="calc-taxa"><span class="taxa-lbl">Crédito à vista</span><span class="taxa-val">2,99%</span></div>
+      <div class="calc-taxa"><span class="taxa-lbl">Parcelado 12x</span><span class="taxa-val">11,15%</span></div>
+      <div class="calc-taxa"><span class="taxa-lbl">Parcelado 18x</span><span class="taxa-val">14,95%</span></div>
+      <div class="calc-taxa"><span class="taxa-lbl">Pix</span><span class="taxa-val">0,40%</span></div>
     </div>
     <div style="margin-top:32px">
       <a href="https://api.whatsapp.com/send?phone=5582993920321&text=Quero%20saber%20mais%20sobre%20as%20taxas%20da%20PagPay" target="_blank" rel="noopener" class="btn-primary">
@@ -1250,8 +1254,8 @@ footer{background:#080808;border-top:1px solid rgba(255,255,255,.03);padding:72p
       <div class="calc-tabs" role="tablist">
         <button class="tab-btn active" onclick="setTab(this,'debito')" role="tab" aria-selected="true">Débito</button>
         <button class="tab-btn" onclick="setTab(this,'credito1')" role="tab">Crédito à vista</button>
-        <button class="tab-btn" onclick="setTab(this,'credito2')" role="tab">Créd. 2x–6x</button>
-        <button class="tab-btn" onclick="setTab(this,'credito3')" role="tab">Créd. 7x–12x</button>
+        <button class="tab-btn" onclick="setTab(this,'credito2')" role="tab">Parcelado 12x</button>
+        <button class="tab-btn" onclick="setTab(this,'credito3')" role="tab">Parcelado 18x</button>
         <button class="tab-btn" onclick="setTab(this,'pix')" role="tab">Pix</button>
       </div>
     </div>
@@ -1295,7 +1299,7 @@ footer{background:#080808;border-top:1px solid rgba(255,255,255,.03);padding:72p
     </button>
     <button class="plan-btn" onclick="showPlan('d0',this)" role="tab" aria-selected="false" aria-controls="plan-d0">
       <span class="plan-badge-empty"></span>
-      <span class="plan-name">D+0 Antecipado</span>
+      <span class="plan-name">Plano Mega</span>
       <span class="plan-sub">Recebe hoje · Mesmo dia da venda</span>
     </button>
   </div>
@@ -1384,7 +1388,7 @@ footer{background:#080808;border-top:1px solid rgba(255,255,255,.03);padding:72p
       <div class="rates-hl"><span class="hl-val">D+0</span><span class="hl-lbl">Mesmo dia</span></div>
     </div>
     <div class="rates-scroll">
-      <table class="rates-tbl" aria-label="Taxas D+0 Antecipado">
+      <table class="rates-tbl" aria-label="Taxas Plano Mega">
         <thead><tr><th>Modalidade</th><th>Visa</th><th>Master</th><th>Elo</th><th>Hipercard / AmEx</th><th>Outros</th></tr></thead>
         <tbody>
           <tr><td>Débito</td><td>1,39%</td><td>1,39%</td><td>1,45%</td><td>—</td><td>1,60%</td></tr>
@@ -1822,7 +1826,7 @@ const obs=new IntersectionObserver((entries)=>{
 document.querySelectorAll('.fade-in').forEach(el=>obs.observe(el));
 
 /* ── CALCULADORA ── */
-const taxas={debito:.0149,credito1:.0249,credito2:.0299,credito3:.0349,pix:.0099};
+const taxas={debito:.0099,credito1:.0299,credito2:.1115,credito3:.1495,pix:.0040};
 let modalAtual='debito';
 
 function setTab(btn,mod){
